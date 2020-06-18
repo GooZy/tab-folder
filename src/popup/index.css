@@ -1,0 +1,9 @@
+.whole-page {
+    font-size: 14px;
+    user-select: none;
+    padding: 0;
+    margin: 0;
+    width: 152px;
+    position: relative;
+    overflow: hidden;
+}

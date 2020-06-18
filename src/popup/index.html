@@ -1,0 +1,23 @@
+<html>
+<head>
+    <title>{{messages.extName}}</title>
+    <link rel="stylesheet" href="index.css"/>
+    <meta charset="utf-8">
+</head>
+<body>
+<div id="app">
+    <div class="whole-page">
+        <b>容量：{{tabs.length}}/15</b>
+        <div v-for="(index, tab) in tabs">
+            {{index}}: {{tab.title}}
+        </div>
+        {{messages.extName}}
+    </div>
+</div>
+
+</body>
+<!--for development-->
+<script src="../lib/vue.js"></script>
+<!--<script src="../lib/vue.min.js"></script>-->
+<script src="index.js"></script>
+</html>

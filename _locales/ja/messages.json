@@ -1,0 +1,20 @@
+{
+  "extName": {
+    "message": "タブフォルダ"
+  },
+  "extDescription": {
+    "message": "後で開きたいタブを一時的に保存します。"
+  },
+  "cmdSaveTabDes": {
+    "message": "タブをフォルダに保存します"
+  },
+  "popUpTitle": {
+    "message": "Ctrl(Win)/Command(Mac)+K を押してタブを保存します"
+  },
+  "contextMenu1": {
+    "message": "現在のタブをタブフォルダに保存"
+  },
+  "contextMenu2": {
+    "message": "リンクをタブフォルダに保存"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "extName": {
+    "message": "标签文件夹"
+  },
+  "extDescription": {
+    "message": "临时保存您希望稍后打开的标签页。"
+  },
+  "cmdSaveTabDes": {
+    "message": "保存标签到文件夹"
+  },
+  "popUpTitle": {
+    "message": "使用 Ctrl(Win)/Command(Mac)+K 保存标签页"
+  },
+  "contextMenu1": {
+    "message": "保存当前标签至标签文件夹"
+  },
+  "contextMenu2": {
+    "message": "保存链接至标签文件夹"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "extName": {
+    "message": "Tab Folder"
+  },
+  "extDescription": {
+    "message": "Temporarily save tabs you want to open later."
+  },
+  "cmdSaveTabDes": {
+    "message": "Save tab to the folder"
+  },
+  "popUpTitle": {
+    "message": "Press Ctrl(Win)/Command(Mac)+K to save current tab"
+  },
+  "contextMenu1": {
+    "message": "Save current tab to tab folder"
+  },
+  "contextMenu2": {
+    "message": "Save the link to tab folder"
+  }
+}

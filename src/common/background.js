@@ -19,8 +19,7 @@ chrome.commands.onCommand.addListener(function(command) {
     chrome.tabs.query({active: true, lastFocusedWindow: true}, function(tabs) {
         if (command === 'save_tab') {
             let tab = tabs[0];
-            chrome.tabs.remove(tab.id);
-            saveTabInfo(tab.url, tab.title, tab.favIconUrl);
+            saveTabInfo(tab.url, tab.title, tab.favIconUrl, tab.id);
         }
     });
 });
@@ -28,8 +27,7 @@ chrome.commands.onCommand.addListener(function(command) {
 // Context menu listener
 chrome.contextMenus.onClicked.addListener(function (info, tab) {
     if (info.linkUrl == null) {
-        chrome.tabs.remove(tab.id);
-        saveTabInfo(tab.url, tab.title, tab.favIconUrl);
+        saveTabInfo(tab.url, tab.title, tab.favIconUrl, tab.id);
     } else {
         saveTabInfo(info.linkUrl, info.selectionText);
     }

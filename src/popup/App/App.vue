@@ -4,6 +4,8 @@
     <div slot="header" class="clearfix">
       <span style="font-size: 120%; padding: 6px">
         <b>文件夹容量：</b>{{tabs.length}}/{{capacity}}
+        <el-button class="btn" type="primary" icon="el-icon-setting" style="float: left" plain
+                   @click="openOption"></el-button>
       </span>
 
       <el-tooltip effect="light" :content="localeMessage.popUpHint" placement="top">
@@ -106,6 +108,9 @@
         chrome.storage.sync.set({
           "tabs": this.tabs
         })
+      },
+      openOption() {
+        chrome.runtime.openOptionsPage();
       }
     }
   }

@@ -1,5 +1,5 @@
 const BLOCK_PATTERNS = [
-    RegExp(/^chrome:\/\/.*/),
+    RegExp(/^chrome.*/),
     RegExp(/^\s*$/)
 ];
 const RESULT = {
@@ -14,10 +14,12 @@ function saveTabInfo(url, tittle, iconUrl, id) {
     chrome.storage.sync.get(['tabs', 'capacity'], function (result) {
         // skip block urls
         if (url == null) {
+            alert("无效标签，无法加入文件夹");
             return RESULT.BAD_URL;
         }
         for (let i in BLOCK_PATTERNS) {
             if (BLOCK_PATTERNS[i].test(url)) {
+                alert("无效标签，无法加入文件夹");
                 return RESULT.BAD_URL;
             }
         }

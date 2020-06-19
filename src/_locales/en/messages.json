@@ -16,5 +16,20 @@
   },
   "contextMenu2": {
     "message": "Save the link to tab folder"
+  },
+  "popUpHint": {
+    "message": "Save current tab"
+  },
+  "textFolderCapacity": {
+    "message": "Folder capacity"
+  },
+  "textCreateTime": {
+    "message": "Creation time"
+  },
+  "hintInvalidTab": {
+    "message": "Invalid tab, unable to add to folder"
+  },
+  "hintOverLimit": {
+    "message": "Folder limit exceeded, save failed"
   }
 }

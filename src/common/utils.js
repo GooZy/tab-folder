@@ -14,12 +14,12 @@ function saveTabInfo(url, tittle, iconUrl, id) {
     chrome.storage.sync.get(['tabs', 'capacity'], function (result) {
         // skip block urls
         if (url == null) {
-            alert("无效标签，无法加入文件夹");
+            alert(chrome.i18n.getMessage('hintInvalidTab'));
             return RESULT.BAD_URL;
         }
         for (let i in BLOCK_PATTERNS) {
             if (BLOCK_PATTERNS[i].test(url)) {
-                alert("无效标签，无法加入文件夹");
+                alert(chrome.i18n.getMessage('hintInvalidTab'));
                 return RESULT.BAD_URL;
             }
         }
@@ -34,7 +34,7 @@ function saveTabInfo(url, tittle, iconUrl, id) {
         if (result.tabs != null) {
             let capacity = result.capacity == null ? DEFAULT_FOLDER_CAPACITY : result.capacity;
             if (result.tabs.length >= capacity) {
-                alert("超过文件夹上限，保存失败");
+                alert(chrome.i18n.getMessage('hintOverLimit'));
                 return RESULT.OVER_LIMIT;
             }
             // Deduplication

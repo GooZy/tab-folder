@@ -3,7 +3,7 @@
 
     <div slot="header" class="clearfix">
       <span style="font-size: 120%; padding: 6px">
-        <b>文件夹容量：</b>{{tabs.length}}/{{capacity}}
+        <b>{{localeMessage.textFolderCapacity}}：</b>{{tabs.length}}/{{capacity}}
         <el-button class="btn" type="primary" icon="el-icon-setting" style="float: left" plain
                    @click="openOption"></el-button>
       </span>
@@ -36,7 +36,7 @@
             <el-button class="btn" type="danger" icon="el-icon-remove" plain @click="deleteTab(index)"></el-button>
           </el-header>
           <el-footer height="20%" style="white-space: nowrap;">
-            <b>创建时间：</b>{{utils.unixTime2String(tab.createTimeUnix)}}
+            <b>{{localeMessage.textCreateTime}}：</b>{{utils.unixTime2String(tab.createTimeUnix)}}
           </el-footer>
         </el-container>
       </el-container>
@@ -65,7 +65,9 @@
         }],
         localeMessage: {
           "popUpTitle": "",
-          "popUpHint": ""
+          "popUpHint": "",
+          "textFolderCapacity": "",
+          "textCreateTime": "",
         },
         capacity: BACK_PAGE.getDefaultCapacity(),
         utils: {
@@ -118,7 +120,7 @@
 
 <style>
   .box-card {
-    width: 300px;
+    width: 350px;
   }
   .btn {
     float: right;

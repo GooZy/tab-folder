@@ -16,5 +16,20 @@
   },
   "contextMenu2": {
     "message": "リンクをタブフォルダに保存"
+  },
+  "popUpHint": {
+    "message": "現在のタブを保存"
+  },
+  "textFolderCapacity": {
+    "message": "フォルダー容量"
+  },
+  "textCreateTime": {
+    "message": "作成時間"
+  },
+  "hintInvalidTab": {
+    "message": "無効なタブ、フォルダを追加できません"
+  },
+  "hintOverLimit": {
+    "message": "フォルダの制限を超えたため、保存できませんでした"
   }
 }

@@ -1,11 +1,11 @@
 <template>
   <div class="main_app" style="margin: auto; width: 50%">
-    <h1>Tab Folder</h1>
+    <h1>{{localeMessage.extName}}</h1>
     <el-row :gutter="20">
       <el-col :span="7"><div class="grid-content"></div></el-col>
-      <el-col :span="5"><div class="grid-content bg-purple">文件夹容量</div></el-col>
+      <el-col :span="5"><div class="grid-content bg-purple">{{localeMessage.textFolderCapacity}}</div></el-col>
       <el-col :span="6"><div class="grid-content bg-purple">
-        <el-select v-model="capacity" placeholder="请选择" size="small" @change="changeCapacity">
+        <el-select v-model="capacity" size="small" @change="changeCapacity">
           <el-option
                   v-for="item in capacityOptions"
                   :key="item.value"
@@ -25,7 +25,11 @@
   data() {
     return {
       capacityOptions: [],
-      capacity: BACK_PAGE.getDefaultCapacity()
+      capacity: BACK_PAGE.getDefaultCapacity(),
+      localeMessage: {
+        "textFolderCapacity": "",
+        "extName": "",
+      },
     }
   },
   created() {
@@ -42,6 +46,11 @@
         _this.capacity = result.capacity;
       }
     });
+
+    // init locale messages
+    for (let key in this.localeMessage) {
+      this.localeMessage[key] = chrome.i18n.getMessage(key);
+    }
   },
   methods: {
     changeCapacity() {

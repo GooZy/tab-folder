@@ -19,5 +19,17 @@
   },
   "popUpHint": {
     "message": "保存当前标签页"
+  },
+  "textFolderCapacity": {
+    "message": "文件夹容量"
+  },
+  "textCreateTime": {
+    "message": "创建时间"
+  },
+  "hintInvalidTab": {
+    "message": "无效的标签页，无法加入文件夹"
+  },
+  "hintOverLimit": {
+    "message": "超过文件夹上限，保存失败"
   }
 }

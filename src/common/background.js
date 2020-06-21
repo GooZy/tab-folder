@@ -32,3 +32,7 @@ chrome.contextMenus.onClicked.addListener(function (info, tab) {
         saveTabInfo(info.linkUrl, info.selectionText);
     }
 });
+
+chrome.storage.sync.get(['tabs'], function (result) {
+    updateBadge(result.tabs != null ? result.tabs.length : 0);
+});

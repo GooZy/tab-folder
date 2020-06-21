@@ -48,6 +48,7 @@ function saveTabInfo(url, tittle, iconUrl, id) {
             tabs = tabs.concat(result.tabs).sort((x, y) => {
                 return y.createTimeUnix - x.createTimeUnix;
             });
+            updateBadge(tabs.length);
         }
         chrome.storage.sync.set({
             'tabs': tabs
@@ -58,6 +59,11 @@ function saveTabInfo(url, tittle, iconUrl, id) {
             chrome.tabs.remove(id);
         }
     });
+}
+
+function updateBadge(total) {
+    chrome.browserAction.setBadgeText({text: total + ''});
+    chrome.browserAction.setBadgeBackgroundColor({color: '#4688F1'});
 }
 
 function unixTime2String(uTime, fmt="yyyy-MM-dd hh:mm:ss") {

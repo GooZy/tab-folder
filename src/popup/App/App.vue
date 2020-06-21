@@ -73,6 +73,7 @@
         utils: {
           'unixTime2String': BACK_PAGE.unixTime2String,
           'saveTabInfo': BACK_PAGE.saveTabInfo,
+          'updateBadge': BACK_PAGE.updateBadge,
         }
       }
     },
@@ -109,7 +110,8 @@
         this.tabs.splice(index, 1);
         chrome.storage.sync.set({
           "tabs": this.tabs
-        })
+        });
+        this.utils.updateBadge(this.tabs.length);
       },
       openOption() {
         chrome.runtime.openOptionsPage();
@@ -129,7 +131,7 @@
     height: 20px;
   }
   .cut-text {
-    width: 130px;
+    width: 180px;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;

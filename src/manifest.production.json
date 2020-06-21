@@ -1,6 +1,6 @@
 {
     "name": "__MSG_extName__",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "manifest_version": 2,
     "default_locale": "en",
     "description": "__MSG_extDescription__",
@@ -16,8 +16,8 @@
     },
     "background": {
         "scripts": [
-            "js/common/background.js",
-            "js/common/utils.js"
+            "js/common/utils.js",
+            "js/common/background.js"
         ],
         "persistent": true
     },

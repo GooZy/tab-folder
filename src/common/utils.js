@@ -62,6 +62,10 @@ function saveTabInfo(url, tittle, iconUrl, id) {
 }
 
 function updateBadge(total) {
+    if (!total) {
+        chrome.browserAction.setBadgeText({text: ''});
+        return;
+    }
     chrome.browserAction.setBadgeText({text: total + ''});
     chrome.browserAction.setBadgeBackgroundColor({color: '#4688F1'});
 }

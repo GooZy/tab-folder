@@ -2,6 +2,26 @@
 
 A Chrome extension for temporarily saving tabs you want to open later.
 
+## Introduce
+
+### Add tab
+
+There are three ways you can add a tab to the folder.
+
+#### 1. Press Ctrl(Win)/Command(Mac)+K
+
+#### 2. Click the add button.
+![add](images/add.png)
+
+#### 3. Right click on the page or link.
+![right-click](images/right-click.png)
+
+### Settings
+
+For now, you only can change the capacity of the folder on setting page.
+
+![setting](images/setting.png)
+
 ## Project setup
 ```
 npm install

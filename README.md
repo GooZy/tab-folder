@@ -4,6 +4,8 @@ A Chrome extension for temporarily saving tabs you want to open later.
 
 ## Introduce
 
+[中文](https://goozy.github.io/post/introduce-my-first-chrome-extension/)
+
 ### Add tab
 
 There are three ways you can add a tab to the folder.
